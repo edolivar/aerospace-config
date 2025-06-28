@@ -9,8 +9,15 @@ after-login-command = []
 # You can use it to add commands that run after AeroSpace startup.
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
-after-startup-command = []
+after-startup-command = ['exec-and-forget sketchybar']
 
+# Notify Sketchybar about workspace change
+exec-on-workspace-change = ['/bin/bash', '-c', 'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE']
+
+
+# Notify Sketchybar when new windows are detected
+
+  # Notify Sketchybar when windows are opened, closed, or moved
 # Start AeroSpace at login
 start-at-login = true
 
@@ -58,8 +65,8 @@ automatically-unhide-macos-hidden-apps = false
 #                 See:
 #                 https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-    inner.horizontal = 5 
-    inner.vertical = 5 
+    inner.horizontal = 5
+    inner.vertical = 5
     outer.left = 5
     outer.bottom = 5
     outer.top = 5
@@ -124,6 +131,11 @@ automatically-unhide-macos-hidden-apps = false
     alt-3 = 'workspace 3'
     alt-4 = 'workspace 4'
     alt-5 = 'workspace 5'
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 7545e88 (add config)
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
     alt-shift-1 = [ 'move-node-to-workspace 1', 'workspace 1' ]
     alt-shift-2 = [ 'move-node-to-workspace 2', 'workspace 2' ]
