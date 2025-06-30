@@ -148,6 +148,12 @@ automatically-unhide-macos-hidden-apps = false
     # See: https://nikitabobko.github.io/AeroSpace/commands#mode
     alt-shift-semicolon = 'mode service'
 
+[workspace-to-monitor-force-assignment]
+    1 = 'main'                            # Monitor sequence number from left to right. 1-based indexing
+    2 = 'main'                       # Main monitor
+    3 = 'main'                  # Non-main monitor in case when there are only two monitors
+    4 = 'main'                   # Case insensitive regex substring
+    5 = [ 'secondary', 'main' ]  # Case insensitive regex match
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 [mode.service.binding]
